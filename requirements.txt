@@ -1,0 +1,30 @@
+# =========================================================
+# AI Nutrition Coach - Python dependencies
+# =========================================================
+# Tested with Python 3.9 - 3.12
+# Install all dependencies with:
+#     pip install -r requirements.txt
+# =========================================================
+
+# --- Web framework ----------------------------------------
+flask>=3.0.0,<4.0.0
+
+# --- Deep learning backend --------------------------------
+# NOTE: For GPU support, install the CUDA-matched wheel from
+# https://pytorch.org/get-started/locally/ BEFORE installing
+# the rest of the requirements. Example:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch>=2.1.0
+
+# --- Hugging Face model & tokenizers ----------------------
+transformers>=4.40.0
+accelerate>=0.27.0
+# safetensors is required by Qwen2-VL weights
+safetensors>=0.4.0
+
+# --- Tokenizer dependency for Qwen2-VL --------------------
+# sentencepiece is needed by the Qwen2-VL tokenizer
+sentencepiece>=0.1.99
+
+# --- Image processing -------------------------------------
+Pillow>=10.0.0
